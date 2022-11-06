@@ -1,0 +1,44 @@
+theme = "onedark-pg"
+
+[editor]
+line-number = "relative"
+gutters = ["diagnostics", "line-numbers", "spacer"]
+# gutters = ["diagnostics", "line-numbers", "diff", "spacer"]
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.statusline]
+left = ["mode", "diagnostics", "spinner"]
+center = ["file-name"]
+right = ["selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+
+[editor.file-picker]
+hidden = false
+# or control each character
+[editor.search]
+smart-case = false # match the exact case. use (i?) to ignore case sensitive
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+tab = "→"
+newline = "⏎"
+tabpad = "·" # Tabs will look like "→···" (depending on tab width)
+
+[keys.normal]
+"C-s" = ":w"
+"'" = "repeat_last_motion"
+"space" = { "c" = { "f" = ":format" }}
+
+[keys.insert]
+"C-c" = "normal_mode" # Cant't Remapping Ctrl-c	Close prompt
+
